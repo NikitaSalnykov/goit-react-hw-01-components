@@ -1,4 +1,4 @@
-import { Container, Title } from "./profile.styled"
+import { Container, Title, Text, List} from "./profile.styled"
 
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
@@ -10,23 +10,23 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
       
     />
     <Title>{username}</Title>
-    <p>@{tag}</p>
-    <p>{location}</p>
+    <Text>@{tag}</Text>
+    <Text>{location}</Text>
   </div>
 
-  <ul >
+  <List >
     <li>
-      <span >Followers</span>
+      <Text >Followers</Text>
       <span >{stats.followers}</span>
     </li>
     <li>
-      <span>Views</span>
+      <Text>Views</Text>
       <span >{stats.views}</span>
     </li>
     <li>
-      <span>Likes</span>
+      <Text>Likes</Text>
       <span>{stats.likes}</span>
     </li>
-  </ul>
+  </List>
 </Container>
 }
