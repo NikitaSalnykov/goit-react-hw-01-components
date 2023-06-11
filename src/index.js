@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { App1, App2, App3, App4 } from 'components/App';
 import './index.css';
 
-let counter = 2;
+let counter = 1;
 let App = App1;
 let root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -57,7 +57,7 @@ function updateApp() {
       <App />
       <div style={stylePage}>
         
-      <button style={styleBtn} id='button-p'>Prev</button>
+      <button style={styleBtn} disabled id='button-p'>Prev</button>
       <button style={styleBtn} id='button-n'>Next</button>
         </div>
     </React.StrictMode>
@@ -66,7 +66,8 @@ function updateApp() {
 
 setTimeout(() => {
   const btnPrev = document.getElementById('button-p');
-const btnNext = document.getElementById('button-n');
+  const btnNext = document.getElementById('button-n');
+  
 
 btnPrev.addEventListener('click', () => {
   if (counter > 1) {
