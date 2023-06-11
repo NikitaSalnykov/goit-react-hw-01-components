@@ -51,12 +51,14 @@ export const List = styled.ul`
   padding: 20px;
   flex-wrap: wrap;
   width: 150px;
-  border-top: 2px solid silver;
+  border: 1px solid silver;
  }
- & li:nth-child(2){
-border-left: 2px solid silver;
-border-right: 2px solid silver;
+ & li:last-child{
+border-right: none;
  }
+& li:first-child{
+border-left: none;
+}
  & span {
     font-weight: 600;
     font-size: 18px;
