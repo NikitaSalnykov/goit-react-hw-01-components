@@ -1,7 +1,7 @@
 import { List } from "components/Profile/profile.styled"
 import { StatisticsItem } from "./Statistics-item"
 import { Section } from "./Statistics-styled"
-
+import PropTypes from "prop-types";
 
 export const Statistics = ({ title, stats }) => {
     return <Section>
@@ -10,4 +10,8 @@ export const Statistics = ({ title, stats }) => {
         <StatisticsItem stats={stats}/>
         </List>
     </Section>
-    }   
+}   
+    
+Statistics.propTypes = {
+    title: PropTypes.string.isRequired,
+}

@@ -1,5 +1,5 @@
 import { Container, Title, Text, List} from "./profile.styled"
-
+import PropTypes from "prop-types";
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
   return <Container>
@@ -7,7 +7,8 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
     <img
       src={avatar}
       alt="User avatar"
-      
+        width="150px"
+        height="150px"
     />
     <Title>{username}</Title>
     <Text>@{tag}</Text>
@@ -29,4 +30,12 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
     </li>
   </List>
 </Container>
+}
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired
 }

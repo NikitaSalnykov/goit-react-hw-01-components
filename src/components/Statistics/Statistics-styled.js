@@ -6,7 +6,11 @@ display: flex;
 flex-direction: column;
 background-color: ${randColor};
 color: white;
-
+transition: 200ms ease-in-out;
+&:hover{
+background-color: lightblue;
+color: black;
+}
 & span+span{
 font-size: 25px;
 }

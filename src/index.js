@@ -14,6 +14,7 @@ root.render(
 )
 
 
+
 ///
 
 function updateApp() {
@@ -71,24 +72,19 @@ setTimeout(() => {
 
 btnPrev.addEventListener('click', () => {
   if (counter > 1) {
-    console.log(counter);
-    btnNext.disabled = false;
-    btnPrev.disabled = false;
     counter -= 1;
   } else {
-    btnPrev.disabled = true;
+    counter = 4
   }
   updateApp();
 });
 
-btnNext.addEventListener('click', () => {
+  btnNext.addEventListener('click', () => {
+    btnPrev.disabled = false
   if (counter < 4) {
-    console.log(counter);
-    btnPrev.disabled = false;
-    btnNext.disabled = false;
     counter += 1;
   } else {
-    btnNext.disabled = true;
+    counter = 1
   }
   updateApp();
 });

@@ -24,5 +24,16 @@ export const ItemFriend = styled.li`
         height: 14px;
         border-radius: 50%;
         margin-right: 30px;
+
     }
 `
+
+// export const Span = styled.span.attrs(props => ({
+//   type: 'span',
+//   isOnline: props.isOnline,
+// }))`
+//         width: 14px;
+//         height: 14px;
+//         border-radius: 50%;
+//         margin-right: 30px;
+// `;
