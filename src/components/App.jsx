@@ -12,6 +12,8 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 
   const stylePage = {
     position: "absolute",
+    display: "flex",
+    alignItems: "center",
     bottom: "5vh",
     left: "50%",
     transform: "translateX(-50%)",
@@ -61,12 +63,14 @@ export class App extends Component {
       stats={user.stats} />}
     {taskNumber === 2 && <Statistics title="Upload stats" stats={data} />}
     {taskNumber === 3 && <FriendList friends={friends} />}
-    {taskNumber === 4 && <TransactionHistory items={transactions} />}
+      {taskNumber === 4 && <TransactionHistory items={transactions} />}
+
  
       <div style={stylePage}>
-      <button style={styleBtn}  id='button-p' disabled={taskNumber===1} onClick={this.prevPage}>Prev</button>
-      <button style={styleBtn} id='button-n' disabled={taskNumber===4} onClick={this.nextPage}>Next</button>
-        </div>
+        <button style={styleBtn} id='button-p' disabled={taskNumber === 1} onClick={this.prevPage}>Prev</button>
+                  <p>{taskNumber}</p>
+        <button style={styleBtn} id='button-n' disabled={taskNumber === 4} onClick={this.nextPage}>Next</button>
+      </div>
   </>
 }
 };
