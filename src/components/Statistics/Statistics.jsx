@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 export const Statistics = ({ title, stats }) => {
     return <Section>
-        <h2>{title}</h2>    
+       {title && <h2>{title}</h2>}    
     <List>
         <StatisticsItem stats={stats}/>
         </List>
