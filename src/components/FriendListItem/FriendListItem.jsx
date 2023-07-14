@@ -1,5 +1,5 @@
-import { Title } from "components/Profile/profile.styled"
-import { ItemFriend } from "./FriendList.styled"
+import { TitleList } from './FriendListItem.styled'
+import { ItemFriend } from "../FriendList/FriendList.styled"
 import PropTypes from 'prop-types'
 
 export const FriendListItem = ({friends}) => {
@@ -8,7 +8,7 @@ export const FriendListItem = ({friends}) => {
             return <ItemFriend key={friend.id}>
                 <span style={friend.isOnline ? {backgroundColor: "green"} : {backgroundColor: "red"}}></span>
                 <img src={friend.avatar} alt={friend.name} width="48" height="48"/>
-                <Title>{friend.name}</Title>
+                <TitleList>{friend.name}</TitleList>
             </ItemFriend>
         })
 }

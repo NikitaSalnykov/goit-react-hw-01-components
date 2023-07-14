@@ -1,13 +1,14 @@
-import { TableRaw } from "./TransactionHistory.styled"
+import { TableRaw } from "../TransactionHistory/TransactionHistory.styled"
 import PropTypes from 'prop-types'
+import { TableData } from "./TransactionRaw.styled"
 
 export const TransactionTr = ({ items }) => {
   return items.map((item) => {
     return (
             <TableRaw key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <TableData>{item.type}</TableData>
+            <TableData>{item.amount}</TableData>
+            <TableData>{item.currency}</TableData>
             </TableRaw>
     )
   })

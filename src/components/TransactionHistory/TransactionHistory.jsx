@@ -1,5 +1,5 @@
 import { Table } from "./TransactionHistory.styled"
-import { TransactionTr } from "./TransactionRaw"
+import { TransactionTr } from "../TransactionRaw/TransactionRaw"
 import PropTypes from 'prop-types'
 
 export const TransactionHistory = ({items}) => {

@@ -1,4 +1,4 @@
-import { randColor } from "getRandomColor";
+import { randColor } from "helpers/randColor";
 import styled from "styled-components";
 
 export const ItemList = styled.li`
