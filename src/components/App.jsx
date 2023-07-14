@@ -17,7 +17,6 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
     bottom: "5vh",
     left: "50%",
     transform: "translateX(-50%)",
-    display: "flex",
     flexDirection: "row",
     gap: 20
 }
